@@ -1,0 +1,159 @@
+body{
+	background: url(../img/bg.jpg) no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+
+.card-container {
+	perspective: 600;
+	cursor: pointer;
+	height: 350px;
+	width: 250px;
+	position: relative;
+	display: inline-block;
+	margin: 30px;
+
+}
+.card {
+	position: absolute;
+	width: 100%;
+  	height: 100%;
+	transform-style: preserve-3d;
+  	transition: all 1s ease-in-out;
+  	font-size: 0;
+
+}
+
+.card-pict, .card-pict-back {
+	border-radius: 20px;
+	width: 100%;
+  	height: 100%;
+	position: absolute;
+  	overflow: hidden;
+  	text-align: center;
+    -webkit-backface-visibility: hidden;
+  	backface-visibility: hidden;
+	 transform-style: preserve-3d;
+
+}
+.card-pict {
+	-webkit-box-shadow: 0px 0px 91px -13px rgba(0,0,0,1);
+ 	-moz-box-shadow: 0px 0px 91px -13px rgba(0,0,0,1);
+	box-shadow: 0px 0px 91px -13px rgba(0,0,0,1);
+}
+.card-pict-back {
+	padding: 20px;
+	font-size: 30px;
+	display: flex;
+	flex-direction: column; 
+	justify-content: space-between;
+	align-items: center;
+	background-color: #FFE9A2;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+-webkit-box-shadow: inset 0px 0px 123px 0px rgba(255,255,255,1);
+-moz-box-shadow: inset 0px 0px 123px 0px rgba(255,255,255,1);
+box-shadow: inset 0px 0px 123px 0px rgba(255,255,255,1);
+}
+.card:hover {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.red-card {
+	color: #E64C3C;
+}
+.black-card {
+	color: #000;
+}
+
+.card-pict-back:first-child {
+	align-self: flex-start;
+}
+
+.svg-icon-big {
+	flex-basis: 150px;
+}
+.card__small {
+	font-size: 17px;
+	text-align: left;
+	width: 100%;
+}
+
+.card__small .svg-icon {
+	width: 15px;
+	height: 15px;
+}
+
+.card__medium .svg-icon {
+	width: 35px;
+	height: 35px;
+}
+
+.card__medium {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.card-3row .card__medium:nth-last-child(2), .card-3row .card__medium:nth-last-child(3), 
+.card-3row .card__medium:nth-last-child(4), .card-2row .card__medium:nth-last-child(2), 
+.card-2row .card__medium:nth-last-child(3), .card__small--down {
+	transform: rotateZ(180deg);
+}
+
+/* Layout */
+.ba-container{
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1200px;
+}
+
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+
+	-webkit-transition: border-radius .3s ease-in, color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: border-radius .3s ease-in, color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: border-radius .3s ease-in, color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
